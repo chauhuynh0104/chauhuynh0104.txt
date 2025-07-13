@@ -1,5 +1,5 @@
 {
-    ACCESS_ALLOWED: false, // Đặt thành false để chặn truy cập
-    MESSAGE: "Server đang bảo trì. Nếu có vấn đề gì gấp vui lòng liên hệ: Chauhuynh0104@gmail.com - 079.567.9350", // Thông báo khi bị chặn
-    
+    "ACCESS_ALLOWED": false, // Đặt thành false sẽ chặn truy cập
+    "MESSAGE": "Server đang bảo trì.\nMọi vấn đề vui lòng liên hệ:\nMail: Chauhuynh0104@gmail.com\nSĐT: 079.567.9350", // Thông báo khi bị chặn
+
 }
