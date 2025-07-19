@@ -1,0 +1,19 @@
+{
+  "Giác hơi": { "duration": 5, "buffer": 1, "prep": 2, "rule": "2 phút đầu, sau đó có thể làm thủ thuật khác" },
+  "Xoa bóp bấm huyệt bằng tay": { "duration": 30, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Kỹ thuật xoa bóp vùng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Điện châm [kim ngắn]": { "duration": 20, "buffer": 1, "prep": 3, "rule": "3 phút đầu châm kim, sau đó có thể làm thủ thuật khác" },
+  "Điều trị bằng tia hồng ngoại": { "duration": 10, "buffer": 1, "prep": 1, "rule": "1 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
+  "Điều trị bằng các dòng điện xung": { "duration": 10, "buffer": 1, "prep": 3, "rule": "3 phút đầu gắn điện, sau đó có thể làm thủ thuật khác" },
+  "Điều trị bằng máy kéo giãn cột sống": { "duration": 15, "buffer": 1, "prep": 2, "rule": "2 phút đầu cài máy, sau đó có thể làm thủ thuật khác" },
+  "Tập vận động có kháng trở": { "duration": 20, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Tập vận động thụ động": { "duration": 20, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Tập vận động có trợ giúp": { "duration": 20, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Điều trị bằng sóng xung kích": { "duration": 4, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Tập điều hợp vận động": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Tập đứng thăng bằng tĩnh và động": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Tập ngồi thăng bằng tĩnh và động": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Tập tạo thuần thần kinh cơ cảm thụ bản thể chức năng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Kỹ thuật tập đứng và đi cho người bệnh liệt nửa người": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Sắc thuốc thang": { "duration": 0, "buffer": 0, "skip": true }
+}
