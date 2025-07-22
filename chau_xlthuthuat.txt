@@ -1,0 +1,12 @@
+(prev.procedure === 'Giác hơi' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
+(current.procedure === 'Giác hơi' && prev.start >= current.start + current.procedureInfo.prep * 60) ||  
+(prev.procedure === 'Điện châm [kim ngắn]' && current.start >= prev.start + prev.procedureInfo.prep * 60) || 
+(current.procedure === 'Điện châm [kim ngắn]' && prev.start >= current.start + current.procedureInfo.prep * 60) ||
+(prev.procedure === 'Điều trị bằng tia hồng ngoại' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
+(current.procedure === 'Điều trị bằng tia hồng ngoại' && prev.start >= current.start + current.procedureInfo.prep * 60)||
+(prev.procedure === 'Điều trị bằng các dòng điện xung' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
+(current.procedure === 'Điều trị bằng các dòng điện xung' && prev.start >= current.start + current.procedureInfo.prep * 60) ||
+(prev.procedure === 'Điều trị bằng máy kéo giãn cột sống' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
+(current.procedure === 'Điều trị bằng máy kéo giãn cột sống' && prev.start >= current.start + current.procedureInfo.prep * 60) ||
+(prev.procedure === 'Tập vận động có kháng trở' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
+(current.procedure === 'Tập vận động có kháng trở' && prev.start >= current.start + current.procedureInfo.prep * 60)    
