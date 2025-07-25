@@ -10,5 +10,6 @@
 (prev.procedure === 'Điều trị bằng máy kéo giãn cột sống' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
 (current.procedure === 'Điều trị bằng máy kéo giãn cột sống' && prev.start >= current.start + current.procedureInfo.prep * 60) ||
 (prev.procedure === 'Tập vận động có kháng trở' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
+(prev.procedure === 'Điều trị bằng sóng ngắn' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
 (current.procedure === 'Tập vận động có kháng trở' && prev.start >= current.start + current.procedureInfo.prep * 60)    
 )
