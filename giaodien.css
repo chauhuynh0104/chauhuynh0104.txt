@@ -1,0 +1,879 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            padding: 2cm;
+            min-height: 100vh;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .container {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .table-container {
+            flex: 1;
+            overflow: auto;
+            border: 1px solid #ddd;
+            background: white;
+        }
+        .upload-section {
+            border: 2px dashed #3498db;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+            word-break: break-word;
+            max-width: 200px;
+        }
+        th {
+            background: #f2f2f2;
+            position: sticky;
+            top: 0;
+        }
+        .conflict {
+            background-color: #ffdddd;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .login-page .procedure-info {
+        
+            padding: 45px;
+            margin: 0px auto;
+            border-radius: 8px;
+            border: 2px solid #999999;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+        .procedure-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            width: auto;
+            max-width: none;
+            box-shadow: none;
+        }
+        #errorLog {
+            overflow-y: auto;
+        }
+        .error-item {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .error-item:last-child {
+            border-bottom: none;
+        }
+        .file-requirements {
+            background-color: #e7f4ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .file-requirements.hidden {
+            opacity: 0;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+        .conflict-row {
+            background-color: #e0f7fa;
+        }
+        .conflict-detail {
+            white-space: normal !important;
+            line-height: 1.5;
+            padding: 8px;
+        }
+        .conflict-detail br {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px auto;
+            text-align: center;
+            max-width: 420px;
+            border: 2px solid #999999;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+        .login-input {
+            padding: 10px;
+            width: 200px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-error {
+            color: #d9534f;
+            margin-top: 10px;
+            display: none;
+        }
+        .main-content {
+            display: none;
+        }
+        .login-title {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #e74c3c;
+        }
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+        .option-section {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        #operatorFilter {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #operatorFilter label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        #operatorSelect {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 250px;
+        }
+        .time-suggestion {
+            background-color: #e8f5e9;
+            padding: 5px;
+            border-radius: 3px;
+            margin-top: 5px;
+        }
+        .no-suggestion {
+            color: #d32f2f;
+            font-style: italic;
+        }
+        .time-options {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .time-options label {
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .group-separator {
+            background-color: #FFFFFF;
+            height: 5px;
+        }
+		/* Phần chữ có chú thích */
+        .chu-thich {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: #000000;
+    
+        } 
+        /* Khung chú thích ẩn */
+        .chu-thich .noi-dung {
+            visibility: hidden;
+            width: 200px;
+            background-color: #ffffcc;
+            color: #333;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            border: 1px solid #ffcc00;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        /* Hiển thị chú thích khi di chuột vào */
+        .chu-thich:hover .noi-dung {
+            visibility: visible;
+            opacity: 1;
+        }
+        /* Mũi tên nhỏ phía dưới chú thích */
+        .chu-thich .noi-dung::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #ffffcc transparent transparent transparent;
+        }
+		    /* Thêm CSS mới cho bảng lỗi 2 cột */
+  .error-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .error-table th, .error-table td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+        word-break: break-word;
+    }
+    .error-table th {
+        background: #f2f2f2;
+        position: sticky;
+        top: 0;
+    }
+    .error-table .error-row {
+        background-color: #e0f7fa;
+    }
+    .error-table .error-detail {
+        white-space: normal !important;
+        line-height: 1.5;
+        padding: 8px;
+    }
+    #operatorFilterError {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#operatorFilterError label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#operatorFilterError select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+}
+/* =================== TRANG TRÍ NÂNG CẤP =================== */
+
+/* Nút bấm chung */
+.btn {
+  border-radius: 6px !important;
+  transition: all 0.3s ease-in-out !important;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+/* Bảng dữ liệu */
+table, .error-table {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+th {
+  background: linear-gradient(90deg, #3498db, #2980b9) !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+td {
+  transition: background 0.2s ease-in-out;
+}
+tr:hover td {
+  background: rgba(0,0,0,0.03);
+}
+
+/* Light Mode: Lọc người thực hiện */
+#operatorFilter, #operatorFilterError {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+#operatorFilter:hover, #operatorFilterError:hover {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52,152,219,0.5);
+}
+#operatorSelect, #operatorSelectError {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+#operatorSelect:hover, #operatorSelectError:hover {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52,152,219,0.4);
+}
+/* Dark Mode nâng cấp */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+body.dark-mode #operatorFilter,
+body.dark-mode #operatorFilterError {
+  background-color: #2c2c2c !important;
+  color: #ffffff !important;
+  border: 1px solid #555 !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+body.dark-mode #operatorFilter:hover,
+body.dark-mode #operatorFilterError:hover {
+  border-color: #00bcd4 !important;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.6) !important;
+}
+body.dark-mode #operatorSelect,
+body.dark-mode #operatorSelectError {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border: 1px solid #555 !important;
+  border-radius: 5px !important;
+  padding: 8px 10px !important;
+  font-weight: bold !important;
+  transition: all 0.3s ease-in-out !important;
+}
+body.dark-mode #operatorSelect:hover,
+body.dark-mode #operatorSelectError:hover {
+  border-color: #00bcd4 !important;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.5) !important;
+}
+body.dark-mode .list1 {
+    background-color: #2c3e50;
+    border-color: #34495e;
+    color: #ecf0f1;
+}
+.doctor-column {
+    display: none; /* Mặc định ẩn */
+}
+
+.show-doctor .doctor-column {
+    display: table-cell; /* Hiển thị khi có class show-doctor */
+}
+    html {
+        scroll-behavior: smooth;
+    }
+    /* Hiệu ứng highlight khi cuộn tới */
+    .highlight-error-section {
+        animation: highlight-fade 2s ease-out;
+    }
+    @keyframes highlight-fade {
+        0% {
+            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.7);
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+        100% {
+            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0);
+            background-color: rgba(52, 152, 219, 0);
+        }
+    }
+	/* Căn chỉnh icon và text trong tiêu đề */
+th i {
+    margin-right: 8px;
+    color: white; /* Màu icon */
+    width: 16px;
+    text-align: center;
+}
+/* Dark mode */
+body.dark-mode th i {
+    color: #00bcd4;
+}
+/* Hiệu ứng khi hover */
+th:hover i {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+  /* Thêm vào phần style */
+    .fa-spin-continuous {
+        animation: fa-spin 2s infinite linear;
+    }
+    @keyframes fa-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+	.time-suggestion strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.dark-mode .time-suggestion strong {
+    color: #00bcd4;
+}
+.time-suggestion {
+    line-height: 1.6;
+}
+/* ======= TOAST & DASHBOARD ======= */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 14px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 30px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+.dashboard {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.dashboard .card {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+  body.dark-mode #patientCounter {
+    color: #00bcd4;
+  }
+#herbOutlierModal[style*="display"] + br,
+#herbOutlierModal[style*="display"] + br + br {
+  display: none;
+}
+
+.herb-outlier td {
+    background-color:#ffdddd !important;
+    color:#b71c1c !important;
+    font-weight:600;
+  }
+  
+ 
+/* Dark mode cho khu vực mainblok (upload + tùy chọn) */
+body.dark-mode .mainblok {
+  background: #1e1e1e !important;
+  border: 2px solid #555 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(0,188,212,0.25); /* nhẹ, đồng bộ theme */
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* Các control bên trong mainblok */
+body.dark-mode .mainblok input,
+body.dark-mode .mainblok select,
+body.dark-mode .mainblok button {
+  background: #2c2c2c !important;
+  color: #ffffff !important;
+  border: 1px solid #666 !important;
+}
+
+/* Dark mode: tooltip ở mọi nơi (tiêu đề & nội dung) */
+body.dark-mode .chu-thich .noi-dung {
+  background: #2c3e50 !important;  /* đổi sang nền tối dễ đọc; muốn giữ nền vàng thì xóa dòng này */
+  color: #ffffff !important;        /* nếu giữ nền vàng, đổi thành #000 !important */
+  border: 1px solid #00bcd4 !important;
+}
+ body.dark-mode #loadingPopup {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  body.dark-mode #loadingPopup div {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+  }
+
+  body.dark-mode #patientCounter {
+    color: #00bcd4;
+  }
+  
+   /* Hiệu ứng mượt */
+  #loadingPopup {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  #loadingPopup.show {
+    opacity: 1;
+  }
+  /* Progress bar */
+  #progressBarContainer {
+    width: 100%;
+    background: #ddd;
+    height: 6px;
+    margin-top: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  #progressBar {
+    width: 0%;
+    height: 100%;
+    background: #3498db;
+    transition: width 0.5s ease;
+  }
+  body.dark-mode #progressBarContainer {
+    background: #555;
+  }
+  body.dark-mode #progressBar {
+    background: #00bcd4;
+  }
+
+  body.dark-mode #patientCounter {
+    color: #00bcd4;
+  }
+  
+  
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scrolling-text span {
+  display: inline-block;
+  padding-left: 0%; /* remove initial blank space */
+  animation: scroll-left 8s linear infinite; /* faster scroll */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+ :root {
+    --accent: #3498db;
+    --accent-hover: #2980b9;
+    --accent-border: #3498db;
+  }
+  body.theme-default { --accent:#3498db; --accent-hover:#2980b9; --accent-border:#3498db; }
+  body.theme-orange  { --accent:#FF6600; --accent-hover:#e65c00; --accent-border:#FF6600; }
+  body.theme-red     { --accent:#FF0000; --accent-hover:#cc0000; --accent-border:#FF0000; }
+  body.theme-green   { --accent:#00AA00; --accent-hover:#008800; --accent-border:#00AA00; }
+
+  /* Áp dụng biến lên các thành phần chính */
+  .btn { background-color: var(--accent) !important; color:#fff !important; }
+  .btn:hover { background-color: var(--accent-hover) !important; }
+  .upload-section { border-color: var(--accent-border) !important; }
+  #scanStatus { color: var(--accent-border) !important; }
+  th { background: linear-gradient(90deg,var(--accent),var(--accent-hover)) !important; }
+  #operatorFilter:hover, #operatorFilterError:hover {
+    border-color: var(--accent-border) !important;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15),0 0 8px var(--accent-border) !important;
+  }
+  .highlight-error-section {
+    box-shadow: 0 0 0 4px var(--accent-border) !important;
+    background-color: rgba(0,0,0,0.02) !important;
+  }
+  .time-suggestion strong { color: var(--accent-hover) !important; }
+  
+    #themePicker.theme-picker {
+    position:absolute;
+    top:20px; left:10px;
+    z-index:10000;
+    display:inline-flex;align-items:center;gap:4px;font-size:14px;font-family:Inter,sans-serif;
+    padding:4px 8px;background:rgba(255,255,255,.85);border:1px solid #ccc;border-radius:6px;
+  }
+  body.dark-mode #themePicker.theme-picker {
+    background:rgba(0,0,0,.6);border-color:#666;color:#fff;
+  }
+  #themePicker .theme-swatch{
+    width:20px;height:20px;padding:0;margin:0;border:2px solid #fff;border-radius:50%;cursor:pointer;
+    background:var(--swatch);display:inline-block;line-height:0;outline:none;
+  }
+  #themePicker .theme-swatch:focus{outline:2px solid #000;}
+  body.dark-mode #themePicker .theme-swatch{border-color:#000;}
+  #themePicker .theme-swatch.is-active{box-shadow:0 0 0 2px #000 inset,0 0 0 4px #fff;}
+  body.dark-mode #themePicker .theme-swatch.is-active{box-shadow:0 0 0 2px #fff inset,0 0 0 4px #000;}
+
+  /* Dark toggle inside themePicker */
+  #themePicker .theme-dark-toggle{
+    font-family:'Inter',sans-serif;
+    display:inline-flex;align-items:center;gap:4px;
+    padding:2px 6px;
+    font-size:12px;
+    border:none;
+    background:transparent;
+    color:inherit;
+    cursor:pointer;
+  }
+  #themePicker .theme-dark-toggle:hover{
+    text-decoration:underline;
+  }
+  #themePicker .theme-dark-toggle #darkIcon{font-size:16px;line-height:1;}
+  /* Hide legacy floating dark toggle button if still present */
+  .dark-toggle-btn{display:none!important;}
+  
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+body.dark-mode, 
+body.dark-mode * {
+  color: #ffffff !important;
+}
+body.dark-mode select,
+body.dark-mode option {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+  body.dark-mode .container,
+  body.dark-mode .upload-section,
+  body.dark-mode .login-section,
+  body.dark-mode .procedure-info,
+  body.dark-mode .option-section,
+  body.dark-mode .time-options,
+  body.dark-mode .file-requirements,
+  body.dark-mode .table-container,
+  body.dark-mode table,
+  body.dark-mode th,
+  body.dark-mode td {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #444 !important;
+  }
+  
+  .dark-toggle-btn {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
+    z-index: 10000 !important;
+
+    padding: 8px 12px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+/* ======= TOAST & DASHBOARD ======= */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 14px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 30px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+.dashboard {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.dashboard .card {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+.mainblok {
+    background: #edf7ff;
+    border: 2px solid #f3f3f3;
+    margin: 0;
+    padding: 2px 2px 2px 2px;
+    }
+.list1 {
+    background-color: #fffaf0;
+    border: 2px dashed #ffcf66;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+  body.dark-mode #patientCounter {
+    color: #00bcd4;
+  }
+
+
+.herb-row {
+    background-color: #e0f7fa !important;
+}
+ .herb-outlier td {
+    background:#ffdddd !important;
+    color:#b71c1c !important;
+    font-weight:600;
+  }
+  #herbOutlierSummary a {
+    color:#d32f2f;
+    font-weight:600;
+    text-decoration:underline;
+    cursor:pointer;
+  }
+  body.dark-mode .herb-outlier td {
+    background:#5c1f1f !important;
+    color:#ff8a80 !important;
+  }
+  body.dark-mode #herbOutlierSummary a {
+    color:#ff8a80 !important;
+  }
+.dark-mode #herbOutlierModal [role="dialog"] {
+  background:#1e1e1e !important;
+  color:#f5f5f5 !important;
+  border-color:#ff6666 !important;
+}
+
+/* Không gạch chân khi .chu-thich dùng cho tiêu đề */
+.chu-thich.no-underline,
+.chu-thich.no-underline a {
+  text-decoration: none !important;
+}
+/* DARK MODE: popup thủ thuật chi tiết */
+body.dark-mode #procedureOverlay {
+  background: rgba(0,0,0,0.8) !important; /* tối hơn khi bật dark */
+}
+
+body.dark-mode #procedurePopup {
+  background: #1e1e1e !important;
+  color: #f5f5f5 !important;
+  border-color: #ff6666 !important;        /* tuỳ: giữ màu xanh #3498db nếu thích */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.6) !important;
+}
+
+/* chữ tiêu đề bên trong (không bắt buộc, dùng nếu muốn đổi màu riêng) */
+body.dark-mode #procedurePopup h3 {
+  color: #ff8a80 !important;
+}
+
+/* nút Đóng trong dark mode */
+body.dark-mode #procedurePopup .btn {
+  background-color: #ff6666 !important;
+  color: #000 !important;
+}
+/* Dark mode cho ô đăng nhập */
+body.dark-mode .login-section,
+body.dark-mode .login-input {
+  background-color: #2c2c2c !important;
+  color: #ffffff !important;
+  border: 1px solid #666 !important;
+}
+
+/* Placeholder dễ đọc trong dark mode */
+body.dark-mode .login-input::placeholder {
+  color: #bbbbbb !important;
+  opacity: 1; /* bảo đảm không bị quá mờ */
+}
+
+/* Con trỏ gõ chữ (caret) cũng sáng */
+body.dark-mode .login-input {
+  caret-color: #ffffff;
+}
+body.dark-mode #loadingPopup #progressBar {
+  background: #00bcd4 !important; /* thanh tiến trình */
+}
+
+.top-button-group {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.top-button-group .btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease;
+}
+
+.top-button-group .btn:hover {
+  background-color: #2980b9;
+}
+
+
