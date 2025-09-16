@@ -1,6 +1,7 @@
 {
   "Giác hơi": { "duration": 5, "buffer": 1, "prep": 2, "rule": "2 phút đầu, sau đó có thể làm thủ thuật khác" },
   "Xoa bóp bấm huyệt bằng tay": { "duration": 30, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Thủy châm": { "duration": 4, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Kỹ thuật xoa bóp vùng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Điện châm [kim ngắn]": { "duration": 20, "buffer": 1, "prep": 3, "rule": "3 phút đầu châm kim, sau đó có thể làm thủ thuật khác" },
   "Điều trị bằng tia hồng ngoại": { "duration": 10, "buffer": 1, "prep": 1, "rule": "1 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
