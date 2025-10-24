@@ -18,7 +18,7 @@
 "Kỹ thuật tập tay và bàn tay cho người bệnh liệt nửa người": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
 "Tập vận động trên bóng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Tập ngồi thăng bằng tĩnh và động": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
-  "Tập tạo thuần thần kinh cơ cảm thụ bản thể chức năng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Tập tạo thuận thần kinh cơ cảm thụ bản thể chức năng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Kỹ thuật tập đứng và đi cho người bệnh liệt nửa người": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Sắc thuốc thang": { "duration": 0, "buffer": 0, "skip": true }
 }
