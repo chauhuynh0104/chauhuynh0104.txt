@@ -1,10 +1,10 @@
 {
-  "Giác hơi": { "duration": 5, "buffer": 1, "prep": 2, "rule": "2 phút đầu, sau đó có thể làm thủ thuật khác" },
+  "Giác hơi": { "duration": 5, "buffer": 1, "prep": 2,  "machineCode": ["OGH", "GH"], "rule": "2 phút đầu, sau đó có thể làm thủ thuật khác" },
   "Xoa bóp bấm huyệt bằng tay": { "duration": 30, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Thủy châm": { "duration": 4, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Kỹ thuật xoa bóp vùng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
-  "Điện châm [kim ngắn]": { "duration": 20, "buffer": 1, "prep": 3, "rule": "3 phút đầu châm kim, sau đó có thể làm thủ thuật khác" },
-  "Điều trị bằng tia hồng ngoại": { "duration": 10, "buffer": 1, "prep": 1, "rule": "1 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
+  "Điện châm [kim ngắn]": { "duration": 20, "buffer": 1, "prep": 3, "machineCode": "MĐC", "rule": "3 phút đầu châm kim, sau đó có thể làm thủ thuật khác" },
+  "Điều trị bằng tia hồng ngoại": { "duration": 10, "buffer": 1, "prep": 1, "machineCode": "ĐHN", "rule": "1 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
 "Điều trị bằng sóng ngắn": { "duration": 10, "buffer": 1, "prep": 2, "rule": "2 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
   "Điều trị bằng các dòng điện xung": { "duration": 10, "buffer": 1, "prep": 2, "rule": "2 phút đầu gắn điện, sau đó có thể làm thủ thuật khác" },
   "Điều trị bằng máy kéo giãn cột sống": { "duration": 15, "buffer": 1, "prep": 2, "rule": "2 phút đầu cài máy, sau đó có thể làm thủ thuật khác" },
