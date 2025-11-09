@@ -1,5 +1,3 @@
-{
-  "Điện châm [kim ngắn]": "MĐC",
-  "Điều trị bằng tia hồng ngoại": "ĐHN",
-  "Giác hơi": ["GH", "OGH"]
-}
+Điện châm [kim ngắn]:MĐC
+Điều trị bằng tia hồng ngoại:ĐHN
+Giác hơi:GH,OGH
