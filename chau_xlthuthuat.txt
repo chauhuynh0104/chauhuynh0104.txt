@@ -3,6 +3,8 @@
 (current.procedure === 'Giác hơi' && prev.start >= current.start + current.procedureInfo.prep * 60) ||  
 (prev.procedure === 'Điện châm [kim ngắn]' && current.start >= prev.start + prev.procedureInfo.prep * 60) || 
 (current.procedure === 'Điện châm [kim ngắn]' && prev.start >= current.start + current.procedureInfo.prep * 60) ||
+(prev.procedure === 'Hào châm' && current.start >= prev.start + prev.procedureInfo.prep * 60) || 
+(current.procedure === 'Hào châm' && prev.start >= current.start + current.procedureInfo.prep * 60) ||
 (prev.procedure === 'Điều trị bằng tia hồng ngoại' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
 (current.procedure === 'Điều trị bằng tia hồng ngoại' && prev.start >= current.start + current.procedureInfo.prep * 60)||
 (prev.procedure === 'Điều trị bằng các dòng điện xung' && current.start >= prev.start + prev.procedureInfo.prep * 60) ||
