@@ -1,4 +1,4 @@
 {
-    "ACCESS_ALLOWED": true,
+    "ACCESS_ALLOWED": false,
     "MESSAGE": "Warning: Server has crashed. <br/>Máy chủ gặp sự cố.  <br/>Đang thực hiện khôi phục lại dữ liệu đã sao lưu. " 
 }
