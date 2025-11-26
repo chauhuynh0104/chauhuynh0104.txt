@@ -3,6 +3,7 @@
   "Xoa bóp bấm huyệt bằng tay": { "duration": 30, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Thủy châm": { "duration": 4, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Kỹ thuật xoa bóp vùng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+"Kỹ thuật xoa bóp toàn thân": { "duration": 30, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Điện châm [kim ngắn]": { "duration": 20, "buffer": 1, "prep": 3, "machineCode": "MĐC", "rule": "3 phút đầu châm kim, sau đó có thể làm thủ thuật khác" },
  "Hào châm": { "duration": 20, "buffer": 1, "prep": 4, "rule": "4 phút đầu châm kim, sau đó có thể làm thủ thuật khác" },
   "Điều trị bằng tia hồng ngoại": { "duration": 15, "buffer": 1, "prep": 1, "machineCode": "ĐHN", "rule": "1 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
