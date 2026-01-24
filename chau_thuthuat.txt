@@ -7,13 +7,13 @@
   "Điện châm [kim ngắn]": { "duration": 20, "buffer": 1, "prep": 3, "machineCode": "MĐC", "rule": "3 phút đầu châm kim, sau đó có thể làm thủ thuật khác" },
  "Hào châm": { "duration": 20, "buffer": 1, "prep": 4, "rule": "4 phút đầu châm kim, sau đó có thể làm thủ thuật khác" },
   "Điều trị bằng tia hồng ngoại": { "duration": 15, "buffer": 1, "prep": 1, "machineCode": "ĐHN", "rule": "1 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
-"Điều trị bằng sóng ngắn": { "duration": 15, "buffer": 1, "prep": 2, "rule": "2 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
+"Điều trị bằng sóng ngắn": { "duration": 15, "buffer": 1, "prep": 2, "machineCode": "SN", "rule": "2 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
   "Điều trị bằng các dòng điện xung": { "duration": 15, "buffer": 1, "prep": 2, "rule": "2 phút đầu gắn điện, sau đó có thể làm thủ thuật khác" },
-  "Điều trị bằng máy kéo giãn cột sống": { "duration": 15, "buffer": 1, "prep": 2, "rule": "2 phút đầu cài máy, sau đó có thể làm thủ thuật khác" },
+  "Điều trị bằng máy kéo giãn cột sống": { "duration": 15, "buffer": 1, "prep": 2, "machineCode": "MKG", "rule": "2 phút đầu cài máy, sau đó có thể làm thủ thuật khác" },
   "Tập vận động có kháng trở": { "duration": 20, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Tập vận động thụ động": { "duration": 20, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Tập vận động có trợ giúp": { "duration": 20, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
-  "Điều trị bằng sóng xung kích": { "duration": 4, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Điều trị bằng sóng xung kích": { "duration": 4, "buffer": 1, "machineCode": "MXK", "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Tập điều hợp vận động": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Tập đứng thăng bằng tĩnh và động": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
 "Điều trị bằng siêu âm": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
@@ -22,5 +22,5 @@
   "Tập ngồi thăng bằng tĩnh và động": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Tập tạo thuận thần kinh cơ cảm thụ bản thể chức năng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Kỹ thuật tập đứng và đi cho người bệnh liệt nửa người": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
-  "Sắc thuốc thang": { "duration": 0, "buffer": 0, "skip": true }
+  "Sắc thuốc thang": { "duration": 0, "buffer": 0,"machineCode": ["MST", "AST", "ST"], "skip": true }
 }
