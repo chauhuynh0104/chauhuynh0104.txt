@@ -1,7 +1,7 @@
 {
   "Giác hơi": { "duration": 15, "buffer": 1, "prep": 5,  "machineCode": ["OGH", "GH"], "rule": "2 phút đầu, sau đó có thể làm thủ thuật khác" },
   "Xoa bóp bấm huyệt bằng tay": { "duration": 30, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
-  "Thủy châm": { "duration": 10, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Thủy châm": { "duration": 25, "buffer": 1, "prep": 10, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Kỹ thuật xoa bóp vùng": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
 "Kỹ thuật xoa bóp toàn thân": { "duration": 30, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Điện châm [kim ngắn]": { "duration": 25, "buffer": 1, "prep": 5, "machineCode": "MĐC", "rule": "5 phút đầu châm kim, sau đó có thể làm thủ thuật khác" },
