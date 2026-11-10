@@ -12,7 +12,7 @@
   "Tập vận động có kháng trở": { "duration": 20, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
 "Điều trị bằng sóng ngắn": { "duration": 15, "buffer": 1, "prep": 2, "machineCode": "SN", "rule": "2 phút đầu chuẩn bị, sau đó có thể làm thủ thuật khác" },
   "Tập vận động thụ động": { "duration": 20, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
-  "Tập vận động có trợ giúp": { "duration": 20, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
+  "Tập vận động có trợ giúp": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Điều trị bằng sóng xung kích": { "duration": 4, "buffer": 1, "machineCode": "MXK", "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Tập điều hợp vận động": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
   "Tập đứng thăng bằng tĩnh và động": { "duration": 15, "buffer": 1, "rule": "Không được làm thủ thuật khác trong suốt thời gian thực hiện" },
